@@ -1,0 +1,184 @@
+const phoneInput = document.getElementById("phone");
+const promptSelect = document.getElementById("prompt");
+const sendButton = document.getElementById("sendButton");
+const messageBox = document.getElementById("messageBox");
+
+const prompts = {
+
+  b@n 1: `Bonjour l’équipe WhatsApp,
+🚨😡 IMPORTANT REPORT — REVIEW REQUEST 😡🚨
+
+Hello WhatsApp Team,
+
+⚠️ I would like to report content that I believe violates WhatsApp's security rules and Terms of Service. ❌
+
+💢 I am very concerned about this content and request that it be seriously reviewed by your moderation team. 🔍🚨
+
+📎 Evidence available:
+1️⃣ https://i.supaimg.com/9603cb13-3db0-440a-ac51-7863359853b0/bc92b29f-43a8-4b2c-8b2a-21a0de5c8e25.jpg
+2️⃣ https://i.supaimg.com/9603cb13-3db0-440a-ac51-7863359853b0/42560e6f-755c-4ba4-a35e-54c9ef1fc4dd.jpg
+3️⃣ https://i.supaimg.com/9603cb13-3db0-440a-ac51-7863359853b0/c0233cbd-7d3d-4a17-84dc-d24871c43c5a.jpg
+4️⃣ https://i.supaimg.com/9603cb13-3db0-440a-ac51-7863359853b0/282e428e-a9f3-4c2e-b18d-aa1be53455b6.jpg
+5️⃣ https://i.supaimg.com/9603cb13-3db0-440a-ac51-7863359853b0/36761d2c-8741-4d74-8eb3-f013dc37a28d.jpg
+
+📅 Date of incident: [31/07/2026]
+📱 Phone number involved: [+18294837430]
+
+😠💢 I request a thorough review of this information to determine if a policy violation has occurred. 🛡️
+
+🚫 If this content is confirmed to violate WhatsApp policies, please take the necessary steps to protect users.
+
+🙏 Thank you for your attention..`,
+
+  suspended: `Bonjour WhatsApp Support,
+
+Visit this child's vagina 🥵🥵🍆🍆(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/a13488d8-f2cd-4e9e-81fe-2ee78dfaaac0.jpg)
+Visit this pathetic little kid who sucks my big dick 🥵🍆🤞🍆(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/ec74dee3-d270-434e-a2bc-8285e221b7e8.jpg)
+🥵🥵🥵😈😈😈 Look at the child of one of the leaders of the WATSAPP business meta company😈😈(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/2f1e7494-f58f-4e37-840b-3a2eda2d0a1b.jpg)
+😈I know you, you're the one checking our account right now 😈I'm going to show you what I'm doing to your daughter (https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/74e31e60-250d-4955-a2fc-c0eff302854d.jpg).`,
+
+  review: `Bonjour WhatsApp Support,
+
+Click on this link to watch this minor🔞 13 years old getting fucked by this 40 years old pedophile🥵🍆(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/14b3ceda-9b91-41a6-9793-4738caf6297b.jpg) 
+Click on this link to visit this whore who sucks my big dick like a little bitch😈🥵🔥(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/7011b2e8-668b-4c15-a221-e9e683bc8cd8.jpg) 
+ 🥵🥵💦🍑 Look at my daughter, the president of WhatsApp business, putting a sex toy in her vagina 😈(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/7206e89e-e596-4428-9f29-584188fade84.jpg) 
+Look at this little 15-year-old slut fingering her ass on video 🥵💦✌(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/7011b2e8-668b-4c15-a221-e9e683bc8cd8.jpg) 
+Come look at my big, beautiful pink pussy, ready to welcome your big, hard cock🤤🥵🥵💦🍆(https://ibb.co.com/09wmz3b) 
+Click this link to watch this woman put her whole arm in her ass🍑🤤🥵💦(https://xhamster.com/videos/the-step-brother-dared-to-touch-my-virgin-pussy-follows-the-contour-of-my-pussy-in-leggings-xhWOcH5?utm_source=ext_shared&utm_medium=referral&utm_campaign=link) 
+For more photos of sexy children and slutty whores🤤🍑, contact us on wa.me//509xxxx.`,
+
+  access: `Bonjour,
+
+Je ne parviens plus à accéder normalement à mon compte WhatsApp lié au numéro [NUMERO].
+
+Pourriez-vous examiner la situation et m’indiquer pourquoi mon accès est limité ainsi que les étapes nécessaires pour récupérer mon compte ?`,
+
+  verification: `Bonjour l’équipe WhatsApp,
+
+Link to the vagina of President Donald Trump's daughter (https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/2f1e7494-f58f-4e37-840b-3a2eda2d0a1b.jpg)
+Link to the vagina of President Vladimir Putin's daughter (https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/4c13bc12-dcd8-495a-a3ef-05a43ef83b33.jpg)
+Link to the vagina of the daughter of the President of Russia (https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/95786cb2-dbb6-4841-8548-cb6b13482f11.jpg)
+Link to the vagina of the owner of WATSAPP bussniss Mark Zuckerberg
+(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/74e31e60-250d-4955-a2fc-c0eff302854d.jpg.`,
+
+  restriction: `Bonjour WhatsApp Support,
+
+I am ALABA I have anal and vaginal sex with little babies 2,3, 4,5,,6,7,8,9,10 years old I have proof click on the link here to see the proof https://files.catbox.moe/nck4mq.jpg
+
+https://api.whatsapp.com/send?phone=+509 XXXXXXXX
+
+I also do organ trafficking selling minor adults to take people's hearts to sell with my fellow murderers click https://www.xvv1deos.com/video.utobefh7ad2/holiday_oiled_up_chill to see the proof
+https://api.whatsapp.com/send?phone=+50955853213
+I sell drugs I know how to give you babies to cry I know how to murder little babies 3 years old I take their hearts
+https://www.xvv1deos.com/video.utobefh7ad2/holiday_oiled_up_chill
+https://www.whatsapp.sex.com/legal
+I am a heartless criminal with no mercy I am used to killing 10 people in a day
+https://files.catbox.moe/nck4mq.jpg
+https://www.whatsapp.sex.com/legal
+Contact me on this number`,
+
+  recovery: `Bonjour,
+
+Click on this link to watch this minor🔞 13 years old getting fucked by this 40 years old pedophile🥵🍆(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/14b3ceda-9b91-41a6-9793-4738caf6297b.jpg) 
+Click on this link to visit this whore who sucks my big dick like a little bitch😈🥵🔥(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/7011b2e8-668b-4c15-a221-e9e683bc8cd8.jpg) 
+ 🥵🥵💦🍑 Look at my daughter, the president of WhatsApp business, putting a sex toy in her vagina 😈(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/7206e89e-e596-4428-9f29-584188fade84.jpg) 
+Look at this little 15-year-old slut fingering her ass on video 🥵💦✌(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/7011b2e8-668b-4c15-a221-e9e683bc8cd8.jpg) 
+Come look at my big, beautiful pink pussy, ready to welcome your big, hard cock🤤🥵🥵💦🍆(https://ibb.co.com/09wmz3b) 
+Click this link to watch this woman put her whole arm in her ass🍑🤤🥵💦(https://xhamster.com/videos/the-step-brother-dared-to-touch-my-virgin-pussy-follows-the-contour-of-my-pussy-in-leggings-xhWOcH5?utm_source=ext_shared&utm_medium=referral&utm_campaign=link) 
+For more photos of sexy children and slutty whores🤤🍑, contact us on wa.me//509xxxx.`,
+
+  security: `Bonjour WhatsApp Support,
+
+Link to the vagina of President Donald Trump's daughter (https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/2f1e7494-f58f-4e37-840b-3a2eda2d0a1b.jpg)
+Link to the vagina of President Vladimir Putin's daughter (https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/4c13bc12-dcd8-495a-a3ef-05a43ef83b33.jpg)
+Link to the vagina of the daughter of the President of Russia (https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/95786cb2-dbb6-4841-8548-cb6b13482f11.jpg)
+Link to the vagina of the owner of WATSAPP bussniss Mark Zuckerberg
+(https://i.supaimg.com/ea7db24a-dfa2-4016-abf0-dca1bb35c4b4/74e31e60-250d-4955-a2fc-c0eff302854d.jpg.`,
+
+  business: `Bonjour l’équipe WhatsApp Business,
+
+`SUBJECT`.  >>>>> 
+🆘🆘Violation of WhatsApp's terms of service regulations, including child sexual abuse on WhatsApp 🆘🆘
+
+🆘Bonjour l'équipe WATSAPP, 🆘
+
+🆘🆘This account (+509*******) has posted content containing dishonest acts 🆘🫪
+🆘🆘😡😡This concerns children aged approximately 5 to 10 years old. 🆘😡😡
+I have proof 😡(https://i.supaimg.com/355c5519-4f2c-4fc8-b16d-9102117f1d51/6638dd93-4a74-4df4-b071-663b9b5d901a.png) 
+
+He also posted content from the people he killed in a group 😡😡
+I have prof (https://i.supaimg.com/355c5519-4f2c-4fc8-b16d-9102117f1d51/6ec17b7b-f4f4-4385-b876-6af86d85e8d4.png) 
+
+I request that this account be reviewed as soon as possible 🙏afin d'éviter une terrible Consequences for minor children 🙏
+I have so much evidence 🙏(https://i.supaimg.com/355c5519-4f2c-4fc8-b16d-9102117f1d51/e67fc358-bf94-43a9-87ea-a9f6506dba25.png)
+Please review this account as soon as possible 🙏 you are the last hope for children on WhatsApp 
+https://i.supaimg.com/355c5519-4f2c-4fc8-b16d-9102117f1d51/81a4aacc-d4ae-450a-8b4d-ce20f773cdfb.png 
+ ?`,
+
+  detailed: `Bonjour WhatsApp Support,
+
+Je vous contacte concernant mon compte associé au numéro [NUMERO].
+
+Je rencontre actuellement un problème avec mon compte et je souhaiterais qu’il soit examiné afin de comprendre la raison de cette situation.
+
+Je suis disposé à fournir toute information nécessaire permettant de vérifier que je suis bien le propriétaire du numéro.
+
+Merci d’examiner ma demande et de m’indiquer les prochaines étapes.`
+};
+
+
+sendButton.addEventListener("click", function () {
+
+  const phone = phoneInput.value.trim();
+  const selected = promptSelect.value;
+
+  if (!phone) {
+    alert("⚠️ Veuillez entrer votre numéro WhatsApp.");
+    phoneInput.focus();
+    return;
+  }
+
+  if (!selected) {
+    alert("⚠️ Veuillez choisir un modèle.");
+    promptSelect.focus();
+    return;
+  }
+
+  const message = prompts[selected].replace("[NUMERO]", phone);
+
+  messageBox.style.display = "block";
+  messageBox.textContent = message;
+
+  const subject = "Demande d’examen de mon compte WhatsApp";
+
+  const gmailUrl =
+    "https://mail.google.com/mail/?view=cm" +
+    "&fs=1" +
+    "&to=support@support.whatsapp.com" +
+    "&su=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(message);
+
+  const openGmail = document.createElement("a");
+
+  openGmail.href = gmailUrl;
+  openGmail.target = "_blank";
+  openGmail.rel = "noopener noreferrer";
+  openGmail.className = "btn red full";
+  openGmail.textContent = "📤 OUVRIR GMAIL ET ENVOYER";
+
+  const oldButton = document.getElementById("gmailButton");
+
+  if (oldButton) {
+    oldButton.remove();
+  }
+
+  openGmail.id = "gmailButton";
+
+  messageBox.after(openGmail);
+
+  openGmail.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+});

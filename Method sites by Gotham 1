@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <title>DK9 • DARKNESS KINGDOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <header>
+    <div class="logo">DK9</div>
+    <div class="subtitle">DARKNESS KINGDOM</div>
+    <div class="motto">NINE SOULS • ONE KINGDOM • ONE FAMILY</div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="crown">♛</div>
+      <h1>DK9 • DARKNESS KINGDOM</h1>
+      <p>🌑 UNE OMBRE QUI NE S'EFFACE PAS.</p>
+
+      <div class="buttons">
+        <a href="https://chat.whatsapp.com/KtpdFR8TNTt1vegv68zd62?s=cl&p=a&mlu=4"
+           target="_blank" class="btn red">
+          🥷 RECRUTEMENT
+        </a>
+
+        <a href="https://chat.whatsapp.com/B5ntOQYblmpIIfhWcdLdJC?s=cl&p=a&mlu=4"
+           target="_blank" class="btn">
+          🖤 COMMUNAUTÉ DK9
+        </a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>👑 L'HISTOIRE DE DK9</h2>
+
+      <p>
+        <strong>DK9 • DARKNESS KINGDOM</strong> est né le
+        <strong>15 septembre 2025</strong>.
+      </p>
+
+      <p>
+        Un nom, neuf âmes, un royaume.
+        Une identité construite autour de la puissance,
+        de la loyauté et de l'unité.
+      </p>
+
+      <div class="quote">
+        🥷 UN NOM QUI REVIENT.<br>
+        🌑 UNE OMBRE QUI NE S'EFFACE PAS.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>☠️ ARCHIVES DES CLANS VAINCUS</h2>
+
+      <div class="enemy-list">
+        <div>☠️ CLAN PURGE</div>
+        <div>👼 CLAN ANGE</div>
+        <div>🩸 BCR</div>
+        <div>😈 CLAN SATAN</div>
+        <div>⚔️ CLAN FAUCHER</div>
+      </div>
+
+      <p class="small">
+        Archives historiques de DK9.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>🔱 CHEFS DE DK9</h2>
+
+      <div class="leaders">
+
+        <div class="leader">
+          <div class="leader-icon">👑</div>
+          <h3>GOTHAM</h3>
+          <p>Chef suprême</p>
+          <p>Gotham le Psycho Mec</p>
+          <a href="tel:+50944866917">📞 +509 44866917</a>
+        </div>
+
+        <div class="leader">
+          <div class="leader-icon">🔱</div>
+          <h3>NOX</h3>
+          <p>Chef DK9</p>
+          <a href="tel:+50944078386">📞 44 07 8386</a>
+        </div>
+
+        <div class="leader">
+          <div class="leader-icon">🖤</div>
+          <h3>LOVE</h3>
+          <p>Chef DK9</p>
+          <a href="tel:+50956946177">📞 56 946 177</a>
+        </div>
+
+        <div class="leader">
+          <div class="leader-icon">☠️</div>
+          <h3>YUNITO</h3>
+          <p>Yunito Devastador</p>
+          <a href="tel:+50943943803">📞 43 94 3803</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card whatsapp-card">
+      <h2>📱 SUPPORT WHATSAPP</h2>
+
+      <p>
+        Prépare une demande d'examen de ton compte WhatsApp.
+      </p>
+
+      <label for="phone">Ton numéro WhatsApp</label>
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="+509XXXXXXXX"
+        autocomplete="tel"
+      >
+
+      <label for="prompt">Choisis une demande</label>
+
+      <select id="prompt">
+
+        <option value="">-- Choisir un modèle --</option>
+
+        <option value="general">
+          📋 Demande générale d'examen
+        </option>
+
+        <option value="suspended">
+          🚫 Compte suspendu
+        </option>
+
+        <option value="review">
+          🔍 Demande de réexamen
+        </option>
+
+        <option value="access">
+          🔐 Problème d'accès
+        </option>
+
+        <option value="verification">
+          📱 Problème de vérification
+        </option>
+
+        <option value="restriction">
+          ⚠️ Restriction potentiellement erronée
+        </option>
+
+        <option value="recovery">
+          🔄 Récupération du compte
+        </option>
+
+        <option value="security">
+          🛡️ Compte potentiellement compromis
+        </option>
+
+        <option value="business">
+          💼 WhatsApp Business
+        </option>
+
+        <option value="detailed">
+          📝 Demande détaillée
+        </option>
+
+      </select>
+
+      <button id="sendButton" class="btn red full">
+        ✉️ PRÉPARER LE MESSAGE
+      </button>
+
+      <div id="messageBox" class="message-box"></div>
+    </section>
+
+    <section class="card">
+      <h2>🔗 UNIVERS DK9</h2>
+
+      <a
+        class="link-button"
+        href="https://chat.whatsapp.com/KtpdFR8TNTt1vegv68zd62?s=cl&p=a&mlu=4"
+        target="_blank">
+        🥷 Rejoindre le recrutement
+      </a>
+
+      <a
+        class="link-button"
+        href="https://chat.whatsapp.com/B5ntOQYblmpIIfhWcdLdJC?s=cl&p=a&mlu=4"
+        target="_blank">
+        🖤 Rejoindre la communauté
+      </a>
+
+      <a
+        class="link-button"
+        href="tel:+50944866917">
+        👑 Contacter Gotham
+      </a>
+    </section>
+
+    <section class="card music-card">
+      <h2>🎵 MUSIQUE DK9</h2>
+
+      <p>
+        Active la musique depuis le lecteur ci-dessous.
+      </p>
+
+      <audio id="music" controls loop>
+        <source src="musique.mp3" type="audio/mpeg">
+        Ton navigateur ne supporte pas le lecteur audio.
+      </audio>
+
+      <p class="small">
+        Ajoute ton fichier audio sous le nom
+        <strong>musique.mp3</strong> dans le même dossier que les fichiers du site.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>🌑🖤 DK9 • DARKNESS KINGDOM 🖤🌑</div>
+    <div>© 2025 - 2026 • NINE SOULS</div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
